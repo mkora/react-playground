@@ -1,0 +1,85 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+#root {
+  padding: 30px;
+}
+
+span {
+  font-weight: normal;
+  font-size: 0.75em;
+  color:#777;
+}
+
+input[type=text] {
+  margin-bottom: 10px;
+}
+
+.column {
+  padding-bottom: 20px;
+  padding-left: 10px;
+  float: left;
+  width: 48%;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media (max-width: 600px) {
+  .column {
+      width: 100%;
+  }
+}
+
+/**
+ * Tic Tac Game styles
+ */
+
+ol, ul {
+  padding-left: 30px;
+}
+
+.game {
+  display: flex;
+  flex-direction: row;
+}
+
+.game-info {
+  margin-left: 20px;
+}
+
+.square {
+  background: #fff;
+  border: 1px solid #999;
+  float: left;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 34px;
+  height: 34px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 34px;
+}
+
+.square:focus {
+  outline: none;
+}
+
+.board-row:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.status {
+  margin-bottom: 10px;
+}
+
