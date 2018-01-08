@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Clock from './Clock';
 import ClickCounter from './ClickCounter';
+import FuturamaList from './FuturamaList';
+import TemperatureConvert from './TemperatureConvert';
 
 class App extends Component {
   render() {
@@ -12,8 +14,16 @@ class App extends Component {
           </div>
           <div className="column">
             <ClickCounter />
-          </div>          
-        </div>          
+          </div>
+        </div>
+        <div className="row">
+          <div className="column">
+            <FuturamaList></FuturamaList>
+          </div>
+          <div className="column">
+            <TemperatureConvert></TemperatureConvert>
+          </div>
+        </div>       
       </div>
     );
   }
