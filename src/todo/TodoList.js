@@ -33,18 +33,17 @@ class TodoList extends Component {
 
   render() {
     return (
-      <div>
-        <h3>
-          <p>Don't forget what todo!</p>
-        </h3>
-        <TodoInput onAddItem={this.handleAddItem}/>
-        <hr/>
-        <h4>Things to do <span className="badge badge-pill badge-secondary">{this.state.data.length}</span></h4>
-        <ul className="list-group">
+      <div className="todo">
+        <div className="header">
+          <h3>Don't forget what to do! You have <span className="badge badge-other">{this.state.data.length}</span> things in stack.</h3>
+          <TodoInput onAddItem={this.handleAddItem} />
+        </div>
+        <ul>
           { this.state.data.map((item) => 
-              <TodoListItem data={item} key={item.id} id={item.id} onClickRemove={this.handleRemoveItem(item.id)} />
+              <TodoListItem data={item} key={item.id} id={item.id} 
+                onClickRemove={this.handleRemoveItem(item.id)} />
           ) }
-        </ul>          
+        </ul>
       </div>
     );
   }

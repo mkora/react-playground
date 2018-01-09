@@ -20,18 +20,18 @@ class App extends Component {
         </div>
         <div className="row">
           <div className="column">
-            <FuturamaList></FuturamaList>
+            <FuturamaList />
           </div>
           <div className="column">
-            <TemperatureConvert></TemperatureConvert>
+            <TemperatureConvert />
           </div>
         </div>
         <div className="row">
           <div className="column">
-            <TicTocGame></TicTocGame>
+            <TicTocGame />
           </div>
           <div className="column">
-            <TodoList></TodoList>
+            <TodoList />
           </div>          
         </div>          
       </div>

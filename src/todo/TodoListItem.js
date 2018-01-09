@@ -8,13 +8,11 @@ class TodoList extends Component {
 
   render() {
     return (
-      <li className="list-group-item">
-        <h4 className="list-group-item-heading">
-          {this.props.data.title} <sup><span className="badge badge-info">{this.props.data.priority}</span></sup>
-        </h4>
-        <p>{this.props.data.description}</p>
-        <input type="button" className="btn btn-danger btn-sm" value="Delete" 
-          onClick={this.handleRemoveItem(this.props.data.id)} />
+      <li>
+        <p>{this.props.data.title} <sup className="badge badge-info">{this.props.data.priority}</sup></p>
+        <span>{this.props.data.description}</span>
+        <span type="button" className="close"
+          onClick={this.handleRemoveItem(this.props.data.id)}>X</span>
       </li>
     );
   }

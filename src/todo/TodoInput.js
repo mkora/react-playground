@@ -18,43 +18,54 @@ class TodoInput extends Component {
     });
   }
 
+  // TODO: add some validation
   handleInputChange = (event) => {
+    const target = event.target;
+    const value = target.type === 'checkbox' ? target.checked : target.value;
+    const name = target.name;
     this.setState({
-      [event.target.name]: event.target.value
+      [name]: value
     });
   }
 
   render() {
     return (
       <div>
-        <h4>Add new one</h4>
         <form onSubmit={this.handleSubmit}>
-          <div className="form-group row">
-            <label className="col-form-label col-sm-3" htmlFor="inputTitle">What to do</label>
-            <div className="col-sm-9">
-              <input type="text" className="form-control" id="inputTitle" placeholder="eq. Clean your coffee maker"
+          <div className="row">
+            <div className="column-25">
+              <label htmlFor="inputTitle">What to do</label>
+            </div>
+            <div className="column-75">
+              <input type="text" id="inputTitle" placeholder="eq. Clean your coffee maker"
                 name="title" value={this.state.title} onChange={this.handleInputChange} />
             </div>
           </div>
-          <div className="form-group row">
-            <label className="col-form-label col-sm-3" htmlFor="inputDescription">Give instructions</label>
-            <div className="col-sm-9">
-              <textarea className="form-control" id="inputDescription" placeholder="eq. Put a glass carafe in the dishwasher"
+          <div className="row">
+            <div className="column-25">
+              <label htmlFor="inputDescription">Give instructions</label>
+            </div>
+            <div className="column-75">
+              <textarea id="inputDescription" placeholder="eq. Put a glass carafe in the dishwasher"
                 name="description" value={this.state.description} onChange={this.handleInputChange}></textarea>
             </div>
           </div>
-          <div className="form-group row">
-            <label className="col-form-label col-sm-3" htmlFor="inputPriority">Importancy</label>
-            <div className="col-sm-9">
-              <select className="form-control" id="inputPriority"
-                name="priority" value={this.state.priority} onChange={this.handleInputChange}>
-                <option>Low</option>
-                <option>Medium</option>
-                <option>High</option>
+          <div className="row">
+            <div className="column-25">
+              <label htmlFor="inputPriority">Importancy</label>
+            </div>
+            <div className="column-75">
+              <select id="inputPriority" name="priority" 
+                value={this.state.priority} onChange={this.handleInputChange}>
+                  <option>Low</option>
+                  <option>Medium</option>
+                  <option>High</option>
               </select>
             </div>
-          </div>          
-          <input type="submit" className="btn btn-success mb-2" value="Add thing to do" />
+          </div>   
+          <div className="row">
+            <input type="submit" value="Add thing in to do list" />
+          </div>
         </form>
       </div>
     );
