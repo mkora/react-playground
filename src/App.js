@@ -3,6 +3,7 @@ import Clock from './Clock';
 import ClickCounter from './ClickCounter';
 import FuturamaList from './FuturamaList';
 import TemperatureConvert from './TemperatureConvert';
+import TicTocGame from './game/TicTocGame';
 
 class App extends Component {
   render() {
@@ -23,7 +24,12 @@ class App extends Component {
           <div className="column">
             <TemperatureConvert></TemperatureConvert>
           </div>
-        </div>       
+        </div>
+        <div className="row">
+          <div className="column">
+            <TicTocGame></TicTocGame>
+          </div>
+        </div>          
       </div>
     );
   }
