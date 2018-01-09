@@ -4,6 +4,7 @@ import ClickCounter from './ClickCounter';
 import FuturamaList from './FuturamaList';
 import TemperatureConvert from './TemperatureConvert';
 import TicTocGame from './game/TicTocGame';
+import TodoList from './todo/TodoList';
 
 class App extends Component {
   render() {
@@ -29,6 +30,9 @@ class App extends Component {
           <div className="column">
             <TicTocGame></TicTocGame>
           </div>
+          <div className="column">
+            <TodoList></TodoList>
+          </div>          
         </div>          
       </div>
     );
