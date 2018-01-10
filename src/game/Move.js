@@ -9,10 +9,14 @@ class Move extends Component {
   render() {
     return (
       <li>
-        <input type="button" value={
-          this.props.move 
-          ? `Go to move #${this.props.move}` 
-          : 'Go to game start'} onClick={this.handleClick()} />
+        <input 
+          type="button" 
+          value={
+            this.props.move 
+            ? `Go to move #${this.props.move}` 
+            : 'Go to game start'
+          } 
+          onClick={this.handleClick()} />
       </li>
     );
   }

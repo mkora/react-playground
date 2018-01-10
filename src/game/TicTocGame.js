@@ -72,7 +72,10 @@ class TicTocGame extends Component {
     });    
   }
 
-  renderMove = (squares, step) => <Move key={step} move={step} 
+  renderMove = (squares, step) => 
+    <Move 
+      key={step} 
+      move={step} 
       onClickJump={this.handleClickMove(step)} />;
 
   render() {

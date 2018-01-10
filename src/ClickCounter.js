@@ -35,7 +35,11 @@ class ClickCounter extends Component {
   render() {
     return (
       <div>
-        <input type="button" value="Click Me!" onClick={this.handleClick} disabled={this.state.disableButton} />
+        <input 
+          type="button" 
+          value="Click Me!" 
+          onClick={this.handleClick} 
+          disabled={this.state.disableButton} />
         <h5>
           <div>You clicked on "Click Me!" {this.state.counter} times</div>
         </h5>

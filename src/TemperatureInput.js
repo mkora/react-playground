@@ -36,7 +36,9 @@ class TemperatureInput extends Component {
     return (
       <div>
         <label htmlFor={`temperature-${type}`}>Enter temperature in {type}: </label>
-        <input type="text" id={`temperature-${type}`} 
+        <input 
+          type="text" 
+          id={`temperature-${type}`} 
           value={this.props.temperature}
           onChange={this.handleChange} />
       </div>

@@ -8,7 +8,11 @@ class FuturamaList extends Component {
       <div>     
         <ul>
           {this.props.data.map((item) => 
-            <FuturamaItem name={item.name} id={item.id} key={item.id} />)}
+            <FuturamaItem 
+              name={item.name} 
+              id={item.id} 
+              key={item.id} />
+          )}
         </ul>
       </div>
     );

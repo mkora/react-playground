@@ -39,7 +39,10 @@ class TodoList extends Component {
         </div>
         <ul>
           { this.state.data.map((item) => 
-              <TodoListItem data={item} key={item.id} id={item.id} 
+              <TodoListItem 
+                data={item} 
+                key={item.id} 
+                id={item.id} 
                 onClickRemove={this.handleRemoveItem(item.id)} />
           ) }
         </ul>

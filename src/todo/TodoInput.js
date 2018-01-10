@@ -37,8 +37,13 @@ class TodoInput extends Component {
               <label htmlFor="inputTitle">What to do</label>
             </div>
             <div className="column-75">
-              <input type="text" id="inputTitle" placeholder="eq. Clean your coffee maker"
-                name="title" value={this.state.title} onChange={this.handleInputChange} />
+              <input 
+                type="text" 
+                id="inputTitle" 
+                placeholder="eq. Clean your coffee maker"
+                name="title" 
+                value={this.state.title} 
+                onChange={this.handleInputChange} />
             </div>
           </div>
           <div className="row">
@@ -46,8 +51,12 @@ class TodoInput extends Component {
               <label htmlFor="inputDescription">Give instructions</label>
             </div>
             <div className="column-75">
-              <textarea id="inputDescription" placeholder="eq. Put a glass carafe in the dishwasher"
-                name="description" value={this.state.description} onChange={this.handleInputChange}></textarea>
+              <textarea 
+                id="inputDescription" 
+                placeholder="eq. Put a glass carafe in the dishwasher"
+                name="description" 
+                value={this.state.description} 
+                onChange={this.handleInputChange}></textarea>
             </div>
           </div>
           <div className="row">
@@ -55,8 +64,11 @@ class TodoInput extends Component {
               <label htmlFor="inputPriority">Importancy</label>
             </div>
             <div className="column-75">
-              <select id="inputPriority" name="priority" 
-                value={this.state.priority} onChange={this.handleInputChange}>
+              <select 
+                id="inputPriority" 
+                name="priority" 
+                value={this.state.priority} 
+                onChange={this.handleInputChange}>
                   <option>Low</option>
                   <option>Medium</option>
                   <option>High</option>

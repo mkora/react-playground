@@ -12,7 +12,9 @@ class Board extends Component {
   }
 
   renderSquare = (i) => 
-    <Square key={i} value={this.props.squares[i]}
+    <Square 
+      key={i} 
+      value={this.props.squares[i]}
       onClickSquare={this.handleClick(i)} />;
 
   render() {

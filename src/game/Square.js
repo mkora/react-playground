@@ -19,8 +19,11 @@ class Square extends Component {
 
   render() {
     return (
-      <input type="button" className="square" 
-        value={this.props.value} onClick={this.handleClick()} />
+      <input 
+        type="button" 
+        className="square" 
+        value={this.props.value} 
+        onClick={this.handleClick()} />
     );
   }
 }
