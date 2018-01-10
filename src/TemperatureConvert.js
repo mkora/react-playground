@@ -31,18 +31,6 @@ class TemperatureConvert extends Component {
 
     return (
       <div>
-        <h3>
-          <p>Convert me!</p>
-          <span>
-            <strong>Controlled Components</strong>, <em>an input 
-              element, whose value is controlled by React
-              </em> and <strong>Shared State</strong> <em>is accomplished by 
-              moving it up to the closest common ancestor</em> of the components
-              that need it. It's called <strong>Lifting State Up</strong>.
-              The parent can then pass the state back down to the 
-              children via <strong>props</strong>.
-          </span>
-        </h3>
         <TemperatureInput 
           degreeType="cel" 
           temperature={(this.state.degreeType === 'fah') // change value bc of type

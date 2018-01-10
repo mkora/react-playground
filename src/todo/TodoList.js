@@ -2,13 +2,12 @@ import React, { Component } from 'react';
 import TodoListItem from './TodoListItem';
 import TodoInput from './TodoInput';
 import './Todo.css';
-import data from './data';
 
 class TodoList extends Component {
 
   state = {
-    data,
-    lastId: data.length
+    data: this.props.data,
+    lastId: this.props.data.length
   };
 
   handleRemoveItem = (id) => (event) => {

@@ -81,16 +81,6 @@ class TicTocGame extends Component {
 
     return (
       <div>
-        <h3>
-          <p>Tic Toc Game</p>
-          <span>Passing data through <strong>props</strong>; making 
-            an <strong>interactive component</strong> (<em>by adding
-            click handler for 'X'-ing each input</em>); <strong>Lifting 
-            state up</strong> (check if one player has won the game: 
-            added a state to Board component and passed down a function
-            from Board to Square)
-          </span>
-        </h3>    
         <div className="game">
           <div className="game-board">
             <Board 

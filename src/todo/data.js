@@ -1,4 +1,4 @@
-const data = [
+const todoData = [
   {
     id: 1,
     title: 'Do the dishes!',
@@ -19,4 +19,4 @@ const data = [
   },  
 ];
 
-export default data;
+export default todoData;

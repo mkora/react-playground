@@ -43,16 +43,6 @@ class Clock extends Component {
   render() {
     return (
       <div className="clock">
-        <h3>
-          <p>Clock Is Ticking</p>
-          <span>Playing with State <em>(variable <strong>time</strong> changes 
-              its value)</em>, Life-Cycle Methods <em>(
-              <strong>componentDidMount</strong> is called immediately after 
-              an instance of a component is being inserted into the 
-              DOM; <strong>componentWillUnmount</strong> is called when a component 
-              is being removed from the DOM)</em> and Stage-2 Class-Field Syntax
-          </span>
-        </h3>
         <DateTime time={this.state.time} />
       </div>
     );

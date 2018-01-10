@@ -32,17 +32,9 @@ class ClickCounter extends Component {
     });
   };
 
-
   render() {
     return (
       <div>
-        <h3>
-          <p>Time to Stop</p>
-          <span>Playin with <strong>State</strong> and 
-          <strong>Event Handlers</strong>. Using <strong>stage-2</strong>,&nbsp; 
-            <em>the class-field syntax</em>, for binding.
-          </span>
-        </h3>
         <input type="button" value="Click Me!" onClick={this.handleClick} disabled={this.state.disableButton} />
         <h5>
           <div>You clicked on "Click Me!" {this.state.counter} times</div>
