@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ContactThankYou from './ContactThankYou';
+import ContactSelect from './ContactSelect';
 
 class ContactForm extends Component {
  
@@ -9,13 +10,13 @@ class ContactForm extends Component {
     country: 'USA',
     subject: ''
   }
-
+  
   handleSubmit = (event) => {
     event.preventDefault();
     this.setState({
       firstName: this.firstName.value,
       lastName: this.lastName.value,
-      country: this.country.value,
+      country: this.country.refs.contactSelect.value,
       subject: this.subject.value
     });
   }
@@ -42,15 +43,7 @@ class ContactForm extends Component {
               placeholder="Enter your last name" 
               ref={(input) => this.lastName = input} />
 
-            <label htmlFor="contact-country">Country</label>
-            <select 
-              id="contact-country" 
-              name="country"
-              ref={(input) => this.country = input}>
-              <option>USA</option>
-              <option>Canada</option>          
-              <option>Australia</option>          
-            </select>
+            <ContactSelect ref={(component) => this.country = component}/>
 
             <label htmlFor="contact-subject">Subject</label>
             <textarea 
