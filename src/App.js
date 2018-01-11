@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Clock from './Clock';
 import ClickCounter from './ClickCounter';
 import FuturamaList from './list/FuturamaList';
-import futuramaData from './list/futurama';
 import TemperatureConvert from './TemperatureConvert';
 import TicTocGame from './game/TicTocGame';
 import TodoList from './todo/TodoList';
@@ -53,10 +52,10 @@ class App extends Component {
                 Keys should be given to the elements inside the array 
                 to give the elements a stable identity; <strong>don’t pass it 
                 to your components</strong>)</em>;<br />
-                Using <strong>Array.map()</strong> function to print li's.
+                Using <strong>Array.map() / Array.filter()</strong> functions to print data.
               </span>
             </h3>
-            <FuturamaList data={futuramaData}/>
+            <FuturamaList />
           </div>
           <div className="column">
             <h3>
@@ -100,7 +99,8 @@ class App extends Component {
                 from <strong>form</strong> elements. 
                 The first method is to implement what are called <strong>controlled
                 components</strong> and the second is to use <strong>React's 
-                Ref</strong> property. <br />                
+                Ref</strong> property (the general rule of thumb is 
+                to <strong>avoid it</strong>).<br />                
                 <strong>Controled Elements</strong> (<em>an input 
                 element, whose value is controlled by React</em>).
               </span>
@@ -138,7 +138,11 @@ class App extends Component {
                 remember that the inputs are DOM elements. <strong>DON'T use them 
                 on production</strong> (see babel-plugin-transform-react-remove-prop-types);<br />
                 Using <strong>Ref</strong> to get a reference to specific component 
-                (see <em>ContactSelect</em> component); <br />
+                (see <em>ContactSelect</em> component). There are three occasions 
+                where you can use it (bc you have no other choice):<br />
+                - Managing focus, text selection, or media playback;<br />
+                - Integrating with third-party DOM libraries;<br />
+                - Triggering imperative animations;<br />      
                 <strong>PropTypes</strong> <em>(<strong>React.PropTypes</strong> has 
                 moved into a different package since <strong>React v15.5</strong>,
                 use the prop-types library instead), see ContactThankYou</em> component;                
