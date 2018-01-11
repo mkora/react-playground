@@ -8,6 +8,7 @@ import TicTocGame from './game/TicTocGame';
 import TodoList from './todo/TodoList';
 import todoData from './todo/data';
 import ContactForm from './ContactForm';
+import ControlledIronMan from './ControlledIronMan';
 
 class App extends Component {
   render() {
@@ -85,6 +86,17 @@ class App extends Component {
           </div>
           <div className="column">
             <h3>
+              <p>I am Iron Man!</p>
+              <span>Controled Elements (<em>an input 
+                element, whose value is controlled by React
+                </em>)</span>
+            </h3>
+            <ControlledIronMan />           
+          </div>          
+        </div>
+        <div className="row">
+          <div className="column">
+            <h3>
               <p>Don't forget what TODO</p>
               <span><strong>Forms: Controlled Components</strong> <em>(with it, 
                 every state mutation will have an associated handler 
@@ -97,26 +109,19 @@ class App extends Component {
             </h3>            
             <TodoList data={todoData} />
           </div>          
-        </div>
-        <div className="row">
           <div className="column">
-          <h3>
+            <h3>
               <p>Contact me!</p>
               <span><strong>PropTypes</strong> <em>(<strong>React.PropTypes</strong> has 
                 moved into a different package since <strong>React v15.5</strong>,
                 use the prop-types library instead)</em>, Using <strong>Ref</strong> property 
                 of an element (<em>an easier way to grab values from a form</em>), 
-                remember that the inputs are DOM elements.
+                remember that the inputs are DOM elements. <strong>DON'T use them 
+                on production</strong> (see babel-plugin-transform-react-remove-prop-types)
               </span>
               <ContactForm></ContactForm>
             </h3>
           </div>
-          <div className="column">
-          <h3>
-              <p>I am Iron Man!</p>
-              <span>Controled Elements</span>
-            </h3>
-          </div>          
         </div>        
       </div>
     );

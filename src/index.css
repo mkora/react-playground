@@ -14,8 +14,9 @@ span {
   color:#777;
 }
 
-input[type=text] {
-  margin-bottom: 10px;
+input {
+  font-size: 1em;
+  margin-bottom: 10px;  
 }
 
 .column {
@@ -41,7 +42,7 @@ input[type=text] {
  * Tic Tac Game styles
  */
 
-ol, ul {
+ .game ol, ul {
   padding-left: 30px;
 }
 
@@ -64,6 +65,7 @@ ol, ul {
   height: 34px;
   margin-right: -1px;
   margin-top: -1px;
+  margin-bottom: -1px;    
   padding: 0;
   text-align: center;
   width: 34px;
@@ -88,7 +90,6 @@ ol, ul {
  */
 .contact-form {
   margin-top: 16px;
-  margin-right: 16px;
 }
 
 .contact-form input[type=text], select, textarea {
@@ -109,7 +110,7 @@ ol, ul {
 
 .contact-form input[type=submit] {
   font-size: 0.9em;
-  background-color: #076191;
+  background-color: #2196F3;
   color: white;
   padding: 12px 20px;
   border: none;
@@ -118,7 +119,7 @@ ol, ul {
 }
 
 .contact-form input[type=submit]:hover {
-  background-color: #076191;
+  background-color: #2196F3;
 }
 
 .contact-thank-you {

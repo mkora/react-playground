@@ -1,4 +1,8 @@
 /* Lists */
+.todo {
+  margin-right: 16px;
+}
+
 .todo ul {
   margin: 0;
   padding: 0;
