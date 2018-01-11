@@ -7,6 +7,7 @@ import TemperatureConvert from './TemperatureConvert';
 import TicTocGame from './game/TicTocGame';
 import TodoList from './todo/TodoList';
 import todoData from './todo/data';
+import ContactForm from './ContactForm';
 
 class App extends Component {
   render() {
@@ -96,7 +97,27 @@ class App extends Component {
             </h3>            
             <TodoList data={todoData} />
           </div>          
-        </div>          
+        </div>
+        <div className="row">
+          <div className="column">
+          <h3>
+              <p>Contact me!</p>
+              <span><strong>PropTypes</strong> <em>(<strong>React.PropTypes</strong> has 
+                moved into a different package since <strong>React v15.5</strong>,
+                use the prop-types library instead)</em>, Using <strong>Ref</strong> property 
+                of an element (<em>an easier way to grab values from a form</em>), 
+                remember that the inputs are DOM elements.
+              </span>
+              <ContactForm></ContactForm>
+            </h3>
+          </div>
+          <div className="column">
+          <h3>
+              <p>I am Iron Man!</p>
+              <span>Controled Elements</span>
+            </h3>
+          </div>          
+        </div>        
       </div>
     );
   }
