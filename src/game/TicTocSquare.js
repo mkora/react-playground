@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class Square extends Component {
+class TicTocSquare extends Component {
 
    /**
    * Pay attention to Parameterized Event Handlers 
@@ -28,4 +28,4 @@ class Square extends Component {
   }
 }
 
-export default Square;
+export default TicTocSquare;

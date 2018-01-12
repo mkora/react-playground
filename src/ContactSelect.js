@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 class ContactInput extends Component {
-
+  // INFO: Stateless function components cannot have refs
   render() {
     return (
       <div>

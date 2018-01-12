@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class Move extends Component {
+class TicTocMove extends Component {
 
   handleClick = (step) => (event) => {
     this.props.onClickJump(step);
@@ -22,4 +22,4 @@ class Move extends Component {
   }
 }
 
-export default Move;
+export default TicTocMove;

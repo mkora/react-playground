@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class ClickCounter extends Component {
-
-  limitClicks = 20;
+  
+  static propTypes = {
+    limit: PropTypes.number.isRequired,
+  }
 
   /**
    * This is an alternative syntax for 
@@ -24,9 +27,9 @@ class ClickCounter extends Component {
   handleClick = () => {
     this.setState((prevState) => {
       return {
-        counter: (this.limitClicks <= prevState.counter) 
+        counter: (this.props.limit <= prevState.counter) 
           ? prevState.counter : (prevState.counter + 1),
-        disableButton: (this.limitClicks <= prevState.counter)
+        disableButton: (this.props.limit <= prevState.counter)
           ? !prevState.disableButton : prevState.disableButton
       };
     });

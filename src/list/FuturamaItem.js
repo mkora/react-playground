@@ -1,12 +1,3 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class FuturamaItem extends Component {
-
-  render() {
-    return (
-      <li>#{this.props.id}. {this.props.name}</li>
-    );
-  }
-}
-
-export default FuturamaItem;
+export default (props) => <li>#{props.id}. {props.name}</li>;

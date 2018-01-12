@@ -1,11 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class DateTime extends Component {
-  render() {
-    return (
-      <div>{this.props.time.toLocaleString()}</div>
-    );
-  }
-}
-
-export default DateTime;
+export default (props) => 
+  <div>{props.time.toLocaleString()}</div>;
