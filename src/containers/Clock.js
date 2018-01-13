@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import DateTime from './DateTime';
+import ClockDateTime from 'ClockDateTime';
 
 class Clock extends Component {
   /**
@@ -43,7 +43,7 @@ class Clock extends Component {
   render() {
     return (
       <div className="clock">
-        <DateTime time={this.state.time} />
+        <ClockDateTime time={this.state.time} />
       </div>
     );
   };

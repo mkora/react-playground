@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Square from './TicTocSquare';
+import Square from 'TicTocSquare';
 
 class TicTocBoard extends Component {
 

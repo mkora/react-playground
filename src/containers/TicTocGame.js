@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import Board from './TicTocBoard';
-import Move from './TicTocMove';
+import Board from 'TicTocBoard';
+import Move from 'TicTocMove';
+import '../css/TicToc.css';
 
 class TicTocGame extends Component {
   /**

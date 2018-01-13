@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import FuturamaItem from './FuturamaItem';
+import FuturamaItem from 'FuturamaItem';
 
 class FuturamaList extends Component {
 

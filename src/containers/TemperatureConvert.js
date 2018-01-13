@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import TemperatureInput from './TemperatureInput';
+import TemperatureInput from 'TemperatureInput';
 
 class TemperatureConvert extends Component {
 

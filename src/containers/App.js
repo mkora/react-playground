@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
-import Clock from './Clock';
-import ClickCounter from './ClickCounter';
-import FuturamaList from './list/FuturamaList';
-import TemperatureConvert from './TemperatureConvert';
-import TicTocGame from './game/TicTocGame';
-import TodoList from './todo/TodoList';
-import todoData from './todo/data';
-import ContactForm from './ContactForm';
-import ControlledIronMan from './ControlledIronMan';
-import ExplanatoryText from './ExplanatoryText';
+import '../css/App.css';
+import todoData from '../mock/todo-data';
+import Clock from 'Clock';
+import ClickCounter from 'ClickCounter';
+import FuturamaList from 'FuturamaList';
+import TemperatureConvert from 'TemperatureConvert';
+import TicTocGame from 'TicTocGame';
+import TodoList from 'TodoList';
+import ContactForm from 'ContactForm';
+import ControlledIronMan from 'ControlledIronMan';
+import ExplanatoryText from 'ExplanatoryText';
 
 class App extends Component {
   render() {

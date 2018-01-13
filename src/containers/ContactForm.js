@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import ContactThankYou from './ContactThankYou';
-import ContactSelect from './ContactSelect';
+import ContactThankYou from 'ContactThankYou';
+import ContactSelect from 'ContactSelect';
+import '../css/ContactForm.css';
 
 class ContactForm extends Component {
  
