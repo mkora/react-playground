@@ -1,8 +1,6 @@
-# React First Experience
+## Code. Play. React.
 
-Apps there:
-
-### Code. Play. React.
+### React Apps Added:
 
 1. Clock Is Ticking (current time)
 
