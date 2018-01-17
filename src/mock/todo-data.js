@@ -1,4 +1,4 @@
-const todoData = [
+export default [
   {
     id: 1,
     title: 'Do the dishes!',
@@ -18,5 +18,3 @@ const todoData = [
     priority: 'High',
   },  
 ];
-
-export default todoData;

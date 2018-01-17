@@ -1,10 +1,14 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
+import { 
+  Route,
+  Switch
+} from 'react-router-dom';
 
 import todoData from '../mock/todo-data';
+import futuramaData from '../mock/futurama-data';
 import Clock from 'Clock';
 import ClickCounter from 'ClickCounter';
-import FuturamaList from 'FuturamaList';
+import FilteredList from 'FilteredList';
 import TemperatureConvert from 'TemperatureConvert';
 import TicTocGame from 'TicTocGame';
 import TodoList from 'TodoList';
@@ -72,7 +76,7 @@ const routes = [
           to your components</strong>)</em>;<br />
           Using <strong>Array.map() / Array.filter()</strong> functions to print data.
         </ExplanatoryText>
-        <FuturamaList />        
+        <FilteredList data={futuramaData} />        
         </div>
     ),
   },
@@ -180,13 +184,15 @@ const routes = [
         <ContactForm />        
       </div>
     ),
-  },            
+  }, 
 ];
 
 export default (props) => (
   <div className="main">
-    {routes.map((route) => 
-      <Route {...route} />
-    )}
+    <Switch>
+      {routes.map((route) => 
+        <Route {...route} />
+      )}
+    </Switch>
   </div>
 );
