@@ -2,7 +2,7 @@
   margin-top: 16px;
 }
 
-.contact-form input[type=text], select, textarea {
+.contact-form input[type=text], .contact-form select, .contact-form textarea {
   font-size: 0.9em;  
   width: 100%;
   padding: 12px;

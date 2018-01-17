@@ -1,0 +1,125 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.header {
+  padding: 10px 16px;
+  background: #555;
+  color: #f1f1f1;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.aside ul {
+  height: 100%;
+  width: 160px;
+  position: absolute;
+  z-index: 1;
+  background-color: #eeeeee;
+  overflow-x: hidden;
+  margin-top: 0px;
+}
+
+.aside a {
+  padding: 6px 8px 6px 2px;
+  text-decoration: none;
+  display: block;
+  color: hsl(0, 0%, 32%); /*color: hsl(0, 78%, 60%);*/
+}
+
+.aside a:hover {
+  text-decoration: underline;
+}
+
+.aside a.active {
+  color: hsl(0, 78%, 60%);
+}
+
+.aside a.icon {
+  display: none;
+  font-size: 1.75em;
+  cursor: pointer;
+}
+
+.aside a.icon:hover {
+  text-decoration: none;
+}
+
+.main {
+  margin-left: 200px;
+  padding: 20px 40px;
+}
+
+span {
+  font-weight: normal;
+  font-size: 0.75em;
+  color:#777;
+}
+
+input[type=text] {
+  font-size: 1em;
+  margin-bottom: 10px;
+  width: 60%;
+}
+
+form input[type=text], form textarea, form select {
+  width: 100%;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.column {
+  padding-bottom: 20px;
+  padding-left: 10px;
+  float: left;
+  width: 48%;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .header {
+    margin-left: 50px;
+  }
+
+  .main {
+    margin-left: 0px;
+  }
+
+  .aside ul {
+    position: relative;
+    width: 100%;
+  }
+
+  .aside li {
+    display: none;
+  }
+
+  .aside a.icon {
+    display: block;
+    position: absolute;
+    top: -6px;
+    left: 12px;
+  }
+
+  .aside.open li {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+}

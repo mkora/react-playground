@@ -64,29 +64,32 @@ class ControlledIronMan extends Component {
           <input 
             type="text" 
             id='comma-separated'
-            style={{width: '99%'}}
             value={this.state.commaSeparated}
             onChange={this.handleInputChange} />
         </div>
 
-        <label htmlFor="multi-lines">Who do you think is Iron Man (start each from new line): </label>
-        <textarea 
-          type="text" 
-          id='multi-lines'
-          style={{height: 100}}
-          value={this.state.multiLines}
-          onChange={this.handleTextareaChange}></textarea>
+        <div className="row">
+          <label htmlFor="multi-lines">Who do you think is Iron Man (start each from new line): </label>
+          <textarea 
+            type="text" 
+            id='multi-lines'
+            rows={ControlledIronMan.data.length}
+            value={this.state.multiLines}
+            onChange={this.handleTextareaChange}></textarea>
+        </div>
 
-        <label htmlFor="multi-select">Who do you think is Iron Man (choose several): </label>
-        <select
-          multiple
-          type="text" 
-          id='multi-select'
-          size={ControlledIronMan.data.length}
-          value={this.state.multiSelect}
-          onChange={this.handleSelectChange}>
-          {ControlledIronMan.data.map((v, k) => <option key={k} value={v}>{v}</option>)}
-        </select>
+        <div className="row">
+          <label htmlFor="multi-select">Who do you think is Iron Man (choose several): </label>
+          <select
+            multiple
+            type="text" 
+            id='multi-select'
+            size={ControlledIronMan.data.length}
+            value={this.state.multiSelect}
+            onChange={this.handleSelectChange}>
+            {ControlledIronMan.data.map((v, k) => <option key={k} value={v}>{v}</option>)}
+          </select>
+        </div>
 
         <input type="submit" onSubmit={this.handleSubmit} />
       </form>

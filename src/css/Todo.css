@@ -85,7 +85,7 @@
 }
 
 /* Form */
-.todo [type=text], select, textarea {
+.todo [type=text], .todo select, .todo textarea {
   width: 100%;
   font-size: 1em;
   padding: 10px;
@@ -132,7 +132,7 @@
 }
 
 @media (max-width: 600px) {
-  .todo .column-25, .todo .column-75, input[type=submit] {
+  .todo .column-25, .todo .column-75, .todo input[type=submit] {
     width: 100%;
     margin-top: 0;
   }
