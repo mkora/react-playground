@@ -22,7 +22,6 @@ class SpaceShipList extends Component {
           ...item,
         })),
       });
-      
     } catch (error) {
       handleError(error);
     }
@@ -38,10 +37,14 @@ class SpaceShipList extends Component {
   render() {
     return (
       <div>
-        {this.state.data && 
-          <FilteredList data={this.state.data} onItemClick={this.handleListItemClick} />}
-        {!this.state.data && 'Loading...'}
-        {this.state.one && <StarShipCharacteristics {...this.state.one} />}
+        {this.state.data 
+          && <FilteredList 
+            data={this.state.data} 
+            onItemClick={this.handleListItemClick} />}
+        {!this.state.data 
+          && 'Loading...'}
+        {this.state.one 
+          && <StarShipCharacteristics {...this.state.one} />}
       </div>
     );
   };

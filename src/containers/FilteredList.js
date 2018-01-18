@@ -22,8 +22,25 @@ class FilteredList extends Component {
   }
 
   handleItemClick = (name) => (event) => {
-    this.props.onItemClick(name);
+    event.preventDefault();
+    if (typeof this.props.onItemClick === 'function') {
+      this.props.onItemClick(name);
+    }
   }
+
+  renderItem = (id, name) =>
+    <ListItem 
+      name={name} 
+      id={id} 
+      key={id} />
+
+  renderClickableItem = (id, name) => 
+    <ListItem 
+      name={name} 
+      id={id} 
+      key={id} 
+      onClick={this.handleItemClick(name)} />
+
 
   render() {
     return (
@@ -35,12 +52,9 @@ class FilteredList extends Component {
           onChange={this.handleFilterInput} />
         <ul>
           {this.state.data.map((item) => 
-            <ListItem 
-              name={item.name} 
-              id={item.id} 
-              key={item.id} 
-              onClick={this.handleItemClick(item.name)}
-            />
+            typeof this.props.onItemClick === 'function' 
+              ? this.renderClickableItem(item.id, item.name)
+              : this.renderItem(item.id, item.name)
           )}
         </ul>
       </div>

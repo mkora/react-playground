@@ -18,7 +18,7 @@ import ExplanatoryText from 'ExplanatoryText';
 import StarShipList from 'StarShipList';
 
 const routes = [
-  { 
+  {
     key: 'home',
     path: '/',
     exact: true,
