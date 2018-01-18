@@ -15,6 +15,7 @@ import TodoList from 'TodoList';
 import ContactForm from 'ContactForm';
 import ControlledIronMan from 'ControlledIronMan';
 import ExplanatoryText from 'ExplanatoryText';
+import StarShipList from 'StarShipList';
 
 const routes = [
   { 
@@ -184,7 +185,20 @@ const routes = [
         <ContactForm />        
       </div>
     ),
-  }, 
+  },
+  {
+    key: 'space-ships',
+    path: '/space-ships',
+    component: () => (
+      <div>
+        <ExplanatoryText title="You've got a new ship!">
+          Using <strong>axios</strong> to get all starships from <a 
+            href="https://swapi.co/">SWAPI</a>
+        </ExplanatoryText>
+        <StarShipList />        
+      </div>
+    ),
+  },  
 ];
 
 export default (props) => (

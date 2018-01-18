@@ -21,6 +21,10 @@ class FilteredList extends Component {
     });
   }
 
+  handleItemClick = (name) => (event) => {
+    this.props.onItemClick(name);
+  }
+
   render() {
     return (
       <div>
@@ -34,7 +38,9 @@ class FilteredList extends Component {
             <ListItem 
               name={item.name} 
               id={item.id} 
-              key={item.id} />
+              key={item.id} 
+              onClick={this.handleItemClick(item.name)}
+            />
           )}
         </ul>
       </div>

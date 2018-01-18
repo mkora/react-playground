@@ -39,7 +39,11 @@ class SandboxSideBar extends Component {
     {
       to: 'contact',
       title: 'Contact Me',
-    }  
+    },
+    {
+      to: 'space-ships',
+      title: 'Buy a starship',
+    }      
   ];
 
   state = {
