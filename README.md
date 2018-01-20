@@ -17,3 +17,5 @@
 7. Don't forget what TODO (todo app)
 
 8. Contact me! (contact form)
+
+9. You've got a new ship! (axios call to SWAPI)
