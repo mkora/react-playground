@@ -19,3 +19,5 @@
 8. Contact me! (contact form)
 
 9. You've got a new ship! (axios call to SWAPI)
+
+10. Sidebar (react router)
